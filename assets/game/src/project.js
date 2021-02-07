@@ -1644,8 +1644,9 @@ require = function a(r, d, c) {
                 window.creativeCanvas.flush_bg()
                 //,this.flush_preview() //disable start painting immediately after selecting the color scheme
             },
-            on_upload: function() {
-                0 != window.hasSketch && window.fileSelector.activate(window.faceSeletor.load_reference)
+            on_upload: function() {//Upload reference image
+                //0 != window.hasSketch && //allow submit of reference image before uploading sketch
+                window.fileSelector.activate(window.faceSeletor.load_reference)
             },
             flush_preview: function() {
                 window.in_color ? this.flush_preview_color() : this.flush_preview_light()
