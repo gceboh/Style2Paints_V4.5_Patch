@@ -1125,7 +1125,7 @@ require = function a(r, d, c) {
                     window.aiBtnNode.active = !0,
                     window.magicBtnNode.active = !0,
                     window.processingNode.active = !1,
-                    window.state_label.change(e, 1)
+                    window.state_label.change((window.faceID+1) + "-Color Scheme ID " + e, 1) //When colorization is finished, show Color Scheme ID on the state label
                 } catch (e) {
                     console.log(e)
                 }
@@ -1641,8 +1641,9 @@ require = function a(r, d, c) {
                     window.bigFaceNode.height = 240
                 }),
                 window.girdNode.active ? window.controller.to_gird() : window.controller.hide_light(),
-                window.creativeCanvas.flush_bg()
-                //,this.flush_preview() //disable start painting immediately after selecting the color scheme
+                window.creativeCanvas.flush_bg(),
+                //this.flush_preview(), //disable start painting immediately after selecting the color scheme
+                window.state_label.text=(window.faceID+1) + "-Color Scheme ID "//When a color scheme is selected, show Color Scheme ID on the state label
             },
             on_upload: function() {//Upload reference image
                 //0 != window.hasSketch && //allow submit of reference image before uploading sketch
