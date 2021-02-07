@@ -1038,19 +1038,54 @@ require = function a(r, d, c) {
                 window.eraser_masker.active = !0,
                 console.log("on_eraser")
             },
-            on_upload_hints: function() {
+            on_upload_hints: function() { //upload color hint points
                 if (0 != window.hasSketch) {
-                    var e = prompt("Points?");
-                    null != e && (window.creativeCanvas.points_XYRGBR = JSON.parse(e),
-                    window.creativeCanvas.finish(),
-                    window.creativeCanvas.create_k())
+                    var input = document.createElement("input");//create an input for upload json file
+                    input.type = "file";
+                    input.accept = "application/json";//accept .json file only
+                    input.onchange = function(){//when a file has been selected
+                        var reader = new FileReader();
+                        reader.readAsText(input.files[0], "UTF-8");//read the file
+                        reader.onload = function (e) {
+                            var json_obj = JSON.parse(e.target.result);//parse json string
+                            window.creativeCanvas.points_XYRGBR = json_obj;//load hints array
+                            window.creativeCanvas.finish();//update canvas
+                            window.creativeCanvas.create_k()//record hints for future undo operation
+                        }
+                    }
+                    input.click();
+                    
+                    //original code:
+                    //var e = prompt("Points?");
+                    //null != e && (window.creativeCanvas.points_XYRGBR = JSON.parse(e),
+                    //window.creativeCanvas.finish(),
+                    //window.creativeCanvas.create_k())
                 }
             },
-            on_download_hints: function() {
+            on_download_hints: function() { //download color hint points
                 if (0 != window.hasSketch) {
-                    var e = window.open("about:blank").document;
-                    e.body.style.backgroundColor = "#000000",
-                    e.writeln(JSON.stringify(window.creativeCanvas.points_XYRGBR))
+                    if (window.creativeCanvas.points_XYRGBR.length > 0) {
+                        var hintsFileName="ColorHints-"+ window.current_room +"_" + window.current_step +".json";
+                        generateFileForDownload(hintsFileName,JSON.stringify(window.creativeCanvas.points_XYRGBR));
+                        
+                        //Encode string into a text file for download
+                        function generateFileForDownload(filename, text) {
+                            var element = document.createElement('a');
+                            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                            element.setAttribute('download', filename);
+                            element.style.display = 'none';
+                            document.body.appendChild(element);
+                            element.click();
+                            document.body.removeChild(element);
+                        }
+                    }else{
+                        alert("No color hint points found!\nBefore saving hints, please add at least one color hint point.");
+                    }
+                    
+                    //original code:
+                    //var e = window.open("about:blank").document;
+                    //e.body.style.backgroundColor = "#000000",
+                    //e.writeln(JSON.stringify(window.creativeCanvas.points_XYRGBR))
                 }
             },
             on_logo: function() {
