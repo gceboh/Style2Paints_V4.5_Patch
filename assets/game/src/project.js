@@ -1641,8 +1641,8 @@ require = function a(r, d, c) {
                     window.bigFaceNode.height = 240
                 }),
                 window.girdNode.active ? window.controller.to_gird() : window.controller.hide_light(),
-                window.creativeCanvas.flush_bg(),
-                this.flush_preview()
+                window.creativeCanvas.flush_bg()
+                //,this.flush_preview() //disable start painting immediately after selecting the color scheme
             },
             on_upload: function() {
                 0 != window.hasSketch && window.fileSelector.activate(window.faceSeletor.load_reference)
