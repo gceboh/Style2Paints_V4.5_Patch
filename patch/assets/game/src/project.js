@@ -1810,6 +1810,8 @@ require = function a(r, d, c) {
                         window.faceID = -233,
                         window.controller.hide_light()
                         //,window.faceSeletor.flush_preview() //disable start painting immediately after uploading reference
+                    } else{
+                        alert("Invalid reference image.\nAspect ratio of the reference image should be less than 2.5");
                     }
                 })
             }
