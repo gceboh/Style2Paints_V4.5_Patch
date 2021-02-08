@@ -6,6 +6,8 @@ Develop stage: Beta
 
 This **unofficial** patch mainly aims at fixing some **small** UI problems in Style2Paints V4.5 (`Style2Paints V4.5.0.2-Beta (V2019.12.13)`).
 
+Related issue:[#157](https://github.com/lllyasviel/style2paints/issues/157)
+
 ## Usage
 1. Install: Use the patch files in the `patch/` dir to replace the corresponding official files.
 
