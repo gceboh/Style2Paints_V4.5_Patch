@@ -36,17 +36,28 @@ Related issue:[#157](https://github.com/lllyasviel/style2paints/issues/157)
 
 (2) When attempting to upload the 2nd sketch, users can't select another color scheme for the 2nd sketch, and have to wait for coloring it by current color scheme. In other words, users can't choose another color scheme and upload the 2nd sketch at the same time.
 
- **Fix:** Disable auto start colorization after selecting a color scheme. **Now users need to click the "Magic Button" to start colorization.**
+(3) Users can't choose another reference image and upload the 2nd sketch at the same time.
+
+ **Fix:**
+Disable auto start colorization after selecting a color scheme. Disable auto start colorization after uploading a reference image. 
+
+ **Now users need to click the "Magic Button" to start colorization.**
 
 ![magic_button](img/magic_button.png)
 
-### 3. Reference-based Colorization
+### 3. Enable Reference-based Colorization at the beginning
 
 **Problem:** Can't upload a reference image **before** uploading a sketch. This means users have to wait for coloring by arbitrary color scheme first. After that, uploading a reference image is allowed.
 
  **Fix:** Allow uploading a reference image before uploading a sketch.
 
 ![upload_reference](img/upload_reference.png)
+
+### Others:
+1. Show error message, when the Aspect ratio of the reference image is larger than 2.5
+2. Fix the following warning info in Chrome console, right after the ui is loaded. (Though it seems that it won't cause any problems.)
+![undefined_error](img/undefined_error.png)
+
 
 ## UI Improvements
 
@@ -55,7 +66,23 @@ Related issue:[#157](https://github.com/lllyasviel/style2paints/issues/157)
 Instead of copying/pasting color hint points as string, now users can **upload/download hints as `.json` file**. It is more convenient, especially for users without programming background. 
  
 <br/>
- 
+
+## ChangeLog
+
+v1.0.1 (2021.2.8)
+
+Disable auto start colorization after uploading a reference image. 
+
+Err Msg: Aspect ratio of the reference image
+
+Fix: An undefined warning
+
+<br/>
+
+v1.0.0 (2021.2.8)
+
+initial version
+
 ---
 
 Commercial usage without [Style2Paints's original author](https://github.com/lllyasviel)'s authorization is forbidden. This unofficial repo is distributed in the hope that it will be useful, but without any warranty.
