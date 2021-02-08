@@ -16,7 +16,7 @@ This **unofficial** patch mainly aims at fixing some **small** UI problems in St
 
 <br/>
 
-1. Show color scheme ID
+### 1. Show color scheme ID
 
 **Problem:** When saving project, it's hard for non-artist users to find out which color scheme has been selected. (It's hard for non-artist users to distinguish the selected color scheme from others, since many of them look quite similar.)
 
@@ -26,7 +26,7 @@ This **unofficial** patch mainly aims at fixing some **small** UI problems in St
 
 ![state_bar](img/state_bar.png)
 
-2. Disable auto start colorization
+### 2. Disable auto start colorization
 
 **Problem:** 
 
@@ -38,7 +38,7 @@ This **unofficial** patch mainly aims at fixing some **small** UI problems in St
 
 ![magic_button](img/magic_button.png)
 
-3. Reference-based Colorization
+### 3. Reference-based Colorization
 
 **Problem:** Can't upload a reference image **before** uploading a sketch. This means users have to wait for coloring by arbitrary color scheme first. After that, uploading a reference image is allowed.
 
@@ -47,6 +47,8 @@ This **unofficial** patch mainly aims at fixing some **small** UI problems in St
 ![upload_reference](img/upload_reference.png)
 
 ## UI Improvements
+
+### 1. Color hints as json file
 
 Instead of copying/pasting color hint points as string, now users can **upload/download hints as `.json` file**. It is more convenient, especially for users without programming background. 
  
