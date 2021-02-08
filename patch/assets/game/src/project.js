@@ -1808,8 +1808,8 @@ require = function a(r, d, c) {
                         window.bigFaceNode.width = n[0],
                         window.bigFaceNode.height = n[1],
                         window.faceID = -233,
-                        window.controller.hide_light(),
-                        window.faceSeletor.flush_preview()
+                        window.controller.hide_light()
+                        //,window.faceSeletor.flush_preview() //disable start painting immediately after uploading reference
                     }
                 })
             }
