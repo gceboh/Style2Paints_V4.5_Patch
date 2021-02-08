@@ -69,6 +69,10 @@ Instead of copying/pasting color hint points as string, now users can **upload/d
 
 ## ChangeLog
 
+v1.0.2 (2021.2.8)
+
+Fix a bug introduced in the previous patch version
+
 v1.0.1 (2021.2.8)
 
 Disable auto start colorization after uploading a reference image. 
