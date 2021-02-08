@@ -1158,8 +1158,8 @@ require = function a(r, d, c) {
                     window.uploading = !1,
                     window.fileBtnNode.active = !0,
                     window.aiBtnNode.active = !0,
-                    window.magicBtnNode.active = !0,
-                    window.processingNode.active = !1,
+                    window.magicBtnNode.active = !0;
+                    if(!window.processingNode===undefined){window.processingNode.active = !1}
                     window.state_label.change((window.faceID+1) + "-Color Scheme ID " + e, 1) //When colorization is finished, show Color Scheme ID on the state label
                 } catch (e) {
                     console.log(e)
