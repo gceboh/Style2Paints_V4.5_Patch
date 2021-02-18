@@ -45,7 +45,7 @@ Disable auto start colorization after selecting a color scheme. Disable auto sta
 
 ![magic_button](img/magic_button.png)
 
-### 3. Enable Reference-based Colorization at the beginning
+### 3. Make Reference-based Colorization Available at the beginning
 
 **Problem:** Can't upload a reference image **before** uploading a sketch. This means users have to wait for coloring by arbitrary color scheme first. After that, uploading a reference image is allowed.
 
