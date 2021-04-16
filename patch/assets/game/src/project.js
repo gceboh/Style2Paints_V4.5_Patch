@@ -1135,7 +1135,7 @@ require = function a(r, d, c) {
                     n += "<div>8. blended_smoothed_careful:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_smoothed_careful.png width="1024"></div>',
 
                     n += "<hr/><div>Processed line art:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + '/sketch.png width="1024"></div>',
-                    n += "<div>" + JSON.stringify(window.creativeCanvas.points_XYRGBR) + "</div>",
+                    n += "<div>Hint points:<br/>" + JSON.stringify(window.creativeCanvas.points_XYRGBR) + "</div>",
                     window.confirmNode.active = !1,
                     e.writeln('<html><head></head><body style="background-color:#C8C8C8">' + n + "</body></html>")
                 }
