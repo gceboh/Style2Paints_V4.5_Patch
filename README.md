@@ -53,6 +53,14 @@ Disable auto start colorization after selecting a color scheme. Disable auto sta
 
 ![upload_reference](img/upload_reference.png)
 
+### 4. Fix saving list
+
+**Problem:** When saving, the order of images in the saving list, is inconsistent with the order in the main window. And all the images are missing numbers and corresponding explanation, which are hard for users to distinguish.
+
+**Fix:** 
+
+![saving_list](img/saving_list.png)
+
 ### Others:
 1. Show error message, when the Aspect ratio of the reference image is larger than 2.5
 2. Fix the following warning info in Chrome console, right after the ui is loaded. (Though it seems that it won't cause any problems.)
@@ -68,6 +76,10 @@ Instead of copying/pasting color hint points as string, now users can **upload/d
 <br/>
 
 ## ChangeLog
+
+v1.0.3 (2021.4.16)
+
+Fix order in saving list.
 
 v1.0.2 (2021.2.8)
 
