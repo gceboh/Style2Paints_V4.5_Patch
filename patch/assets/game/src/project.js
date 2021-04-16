@@ -1123,15 +1123,18 @@ require = function a(r, d, c) {
                     n += '<div><a href="https://twitter.com/hashtag/style2paints?f=tweets&vertical=default" target="_blank">【 Click here to see others\'s results on Twitter. 】</a></div>',
                     n += '<div><a href="https://twitter.com/hashtag/style2paints?f=tweets&vertical=default" target="_blank">【 他の人の結果を見る。 】</a></div>',
                     n += "<div><p><br/></p></div>",
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_smoothed_careful.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_flat_careful.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.flat_careful.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.smoothed_careful.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_smoothed_careless.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_flat_careless.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.flat_careless.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.smoothed_careless.png width="1024"></div>',
-                    n += "<div><img src=" + window.server_url + "/rooms/" + window.current_room + '/sketch.png width="1024"></div>',
+
+                    n += "<div><h1>Careless Mode:</h1><br/>1. flat_careless:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.flat_careless.png width="1024"></div>',
+                    n += "<div>2. blended_flat_careless:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_flat_careless.png width="1024"></div>',
+                    n += "<div>3. smoothed_careless:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.smoothed_careless.png width="1024"></div>',
+                    n += "<div>4. blended_smoothed_careless:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_smoothed_careless.png width="1024"></div>',
+
+                    n += "<hr/><div><h1>Careful Mode:</h1><br/>5. flat_careful:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.flat_careful.png width="1024"></div>',
+                    n += "<div>6. blended_flat_careful:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_flat_careful.png width="1024"></div>',
+                    n += "<div>7. smoothed_careful:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.smoothed_careful.png width="1024"></div>',
+                    n += "<div>8. blended_smoothed_careful:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + "/" + window.current_step + '.blended_smoothed_careful.png width="1024"></div>',
+
+                    n += "<hr/><div>Processed line art:<br/><img src=" + window.server_url + "/rooms/" + window.current_room + '/sketch.png width="1024"></div>',
                     n += "<div>" + JSON.stringify(window.creativeCanvas.points_XYRGBR) + "</div>",
                     window.confirmNode.active = !1,
                     e.writeln('<html><head></head><body style="background-color:#C8C8C8">' + n + "</body></html>")
