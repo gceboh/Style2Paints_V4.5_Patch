@@ -55,7 +55,7 @@ Disable auto start colorization after selecting a color scheme. Disable auto sta
 
 ### 4. Fix saving list
 
-**Problem:** When saving, the order of images in the saving list, is inconsistent with the order in the main window. And all the images are missing numbers and corresponding explanation, which are hard for users to distinguish.
+**Problem:** When saving, the order of images in the saving list, is inconsistent with the order in the main window. And all the images are missing numbers and corresponding explanation, which are hard for users to distinguish.([Issue#162](https://github.com/lllyasviel/style2paints/issues/162))
 
 **Fix:** 
 
